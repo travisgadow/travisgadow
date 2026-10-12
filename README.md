@@ -4,12 +4,15 @@
 
 San Francisco Bay Area · travisgadow@protonmail.com · [LinkedIn](https://www.linkedin.com/in/travisgadow)
 
+### Technical case study
+[DialHaven: architecture, duplicate-callback debugging and operational safeguards](DialHaven-case-study.md). Sanitized September 2026 retrospective; test/demo stage, not customer-scale results.
+
 ### What I build and run
 - **DialHaven** (my startup, pre-revenue): an AI phone receptionist I operate end to end.
   Twilio → voice bridge behind nginx on a Hetzner Ubuntu VPS (systemd, TLS, SSH keys) → n8n post-call workflows (summary, CRM log, e-mail + alerts).
-  - Cut time-to-first-audio to 1.25–1.75 s by comparing 5 LLM options on the call path.
+  - Compared 5 backend-model candidates for a booking task, using measured latency, reliability and cost to guide selection.
   - Audited the whole pipeline in Sep 2026 and fixed 13 bugs from the logs (e.g. duplicate call processing → dedup by call ID).
-  - Daily offsite backups with a tested restore, health checks with alerting.
+  - Daily off-server backups with database-integrity and recovery-input checks; health checks with alerting.
   - I direct AI coding assistants for much of the code; architecture, testing, deployment and operations are mine.
 - **Home lab:** self-built Ubuntu server with Docker, Tailscale mesh VPN, Pi-hole DNS, systemd services and local LLMs.
   Favorite fix: a service silently fell back from GPU to CPU (~10× slower) because it lacked device permissions; fixed with a system-wide systemd unit.
