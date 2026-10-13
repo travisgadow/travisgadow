@@ -2,7 +2,7 @@
 
 **Travis Gadow — automation, implementation and Linux operations**
 
-DialHaven is my own pre-revenue project for small-business phone answering. The system has been exercised with test and demonstration calls; this case study does not claim paying customers, production-scale traffic or an uptime SLA.
+DialHaven is my own project for small-business phone answering. The system has been exercised with test and demonstration calls; this case study does not claim paying customers, production-scale traffic or an uptime SLA.
 
 ## What I own
 
