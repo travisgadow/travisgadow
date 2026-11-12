@@ -2,11 +2,11 @@
 
 **Travis Gadow — automation, implementation and Linux operations**
 
-DialHaven is my own project for small-business phone answering. The system has been exercised with test and demonstration calls; this case study does not claim paying customers, production-scale traffic or an uptime SLA.
+DialHaven is an AI phone reception system for small-business phone answering. The system has been exercised with test calls; this case study does not claim production-scale traffic or an uptime SLA.
 
 ## What I own
 
-I direct AI coding assistants for much of the bridge code. I own the system design, n8n workflow logic, deployment, test-call review and operational troubleshooting. This is hands-on implementation and operations experience, not a claim that I wrote every line unaided.
+I own the system design, n8n workflow logic, deployment, test-call review and operational troubleshooting. This is hands-on implementation and operations experience.
 
 ## Architecture
 
@@ -54,7 +54,7 @@ I corrected the schema and reviewed fallback writes, retry behaviour and follow-
 
 ## Performance evidence, accurately scoped
 
-September demo testing documented response audio beginning approximately **1.25–1.75 seconds after speech started**, while the caller was still speaking. That is a full-duplex observation—not a 1.25–1.75-second delay measured after end-of-speech.
+September testing documented response audio beginning approximately **1.25–1.75 seconds after speech started**, while the caller was still speaking. That is a full-duplex observation—not a 1.25–1.75-second delay measured after end-of-speech.
 
 A separate backend-model comparison considered five candidates, with three trials per tested candidate on a booking task; one candidate was eliminated on price. These small tests guided a project decision and are not a statistically robust end-to-end latency benchmark or a current performance guarantee.
 
@@ -65,10 +65,9 @@ A separate backend-model comparison considered five candidates, with three trial
 - Trade-offs between avoiding duplicates and avoiding lost leads.
 - systemd service management, reverse-proxy configuration and rollback planning.
 - What a successful backup integrity test proves—and what still requires a full recovery drill.
-- Which decisions I made personally and which code was produced with AI assistance.
 
 ## Scope and evidence
 
 This is a sanitized retrospective of the September 2026 system, based on project records. It contains no customer records, account identifiers, credentials, private infrastructure addresses or exported production configuration. The diagram was reconstructed for this case study; it is not an exported live workflow.
 
-No live customer call or full-server recovery was performed to prepare this document. The next stronger proof would be a fresh controlled demonstration and a complete isolated recovery drill.
+No live call or full-server recovery was performed to prepare this document. The next stronger proof would be a fresh controlled test and a complete isolated recovery drill.
